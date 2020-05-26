@@ -49,15 +49,26 @@ img{
 .lista-productos{
     margin-top: 4rem;
     padding: 0;
+    list-style: none;
 }
 
 .lista-productos li{
     float: left;
     width: 50%;
+    padding: 2rem;
 }
 
 @media (min-width: 768px) {
     .lista-productos li{
         width: 33.3%;
     }
+}
+
+.lista-productos li img{
+    border: 1rem solid rgba(128, 1, 195, .45);
+    transition: border-color .3s ease-in-out;
+}
+
+.lista-productos li img:hover{
+    border: 1rem solid rgba(128, 1, 195, 1);
 }

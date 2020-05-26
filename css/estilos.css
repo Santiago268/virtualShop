@@ -22,7 +22,7 @@ body{
 }
 
 h2{
-    font-size: 2.2rem;
+    font-size: 3rem;
     text-align: center;
     text-transform: uppercase;
 }
@@ -47,20 +47,32 @@ img{
 }
 
 .lista-productos{
-    margin-top: 4rem;
     padding: 0;
     list-style: none;
+    text-align: center;
 }
 
 .lista-productos li{
     float: left;
     width: 50%;
     padding: 2rem;
+    padding: 1.5rem 4rem;
+}
+
+/* 2(0) + 1 */
+.lista-productos li:nth-child(2n+1){
+    clear: both;
 }
 
 @media (min-width: 768px) {
     .lista-productos li{
         width: 33.3%;
+    }
+    .lista-productos li:nth-child(2n+1){
+        clear: unset;
+    }
+    .lista-productos li:nth-child(3n+1){
+        clear: both;
     }
 }
 
@@ -71,4 +83,33 @@ img{
 
 .lista-productos li img:hover{
     border: 1rem solid rgba(128, 1, 195, 1);
+}
+
+.lista-productos li p{
+    font-size: 2.2rem;
+    font-weight: bold;
+    margin: 1rem 0 0 0;
+}
+
+.precio{
+    color: #FFCE00;
+    font-size: 2.8rem;
+}
+
+.boton{
+    background-color: #FFCE00;
+    display: inline-block;
+    text-decoration: none;
+    padding: 1rem 4rem;
+    margin-top: 1rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: #8001c3;
+    border: 0.1rem solid rgba(128, 1, 195, 0.5);
+    transition: background-color .3s ease-in-out;
+}
+
+.boton:hover{
+    background-color: #EBBC00;
 }
